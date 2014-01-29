@@ -478,5 +478,5 @@
   <project path="kernel/sony/u8500" name="munjeni/android_kernel_xperiago" remote="github" revision="cm-11" />
   <project path="device/sony/kumquat" name="Andrewas/android_device_sony_kumquat" remote="github" revision="cm-11.0" />
   <project path="vendor/sony/kumquat" name="Andrewas/proprietary_vendor_sony" remote="github" revision="master" />
-  <project path="hardware/semc" name="XperiaNovathor/android_hardware_semc" remote="github" revision="master" />
+  <project path="hardware/semc" name="Andrewas/android_hardware_semc" remote="github" revision="master" />
 </manifest>
