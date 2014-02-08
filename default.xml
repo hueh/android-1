@@ -3,16 +3,11 @@
 
   <remote  name="aosp"
            fetch=".." />
-		   
-  <remote  name="github"
-           fetch=".."
-           review="review.cyanogenmod.org" />
-		   
   <default revision="refs/tags/android-4.4.2_r1"
            remote="aosp"
            sync-j="4" />
 
-  <project path="build" name="CyanogenMod/build" remote="github" revision="cm-11" >
+  <project path="build" name="platform/build" groups="pdk" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
   <project path="abi/cpp" name="platform/abi/cpp" groups="pdk" />
@@ -243,6 +238,7 @@
   <project path="external/yaffs2" name="platform/external/yaffs2" groups="pdk" />
   <project path="external/zlib" name="platform/external/zlib" groups="pdk" />
   <project path="external/zxing" name="platform/external/zxing" />
+  <project path="frameworks/av" name="platform/frameworks/av" groups="pdk" />
   <project path="frameworks/base" name="platform/frameworks/base" />
   <project path="frameworks/compile/libbcc" name="platform/frameworks/compile/libbcc" groups="pdk" />
   <project path="frameworks/compile/mclinker" name="platform/frameworks/compile/mclinker" groups="pdk" />
@@ -250,6 +246,7 @@
   <project path="frameworks/ex" name="platform/frameworks/ex" />
   <project path="frameworks/mff" name="platform/frameworks/mff" />
   <project path="frameworks/ml" name="platform/frameworks/ml" />
+  <project path="frameworks/native" name="platform/frameworks/native" groups="pdk" />
   <project path="frameworks/opt/calendar" name="platform/frameworks/opt/calendar" />
   <project path="frameworks/opt/carddav" name="platform/frameworks/opt/carddav" />
   <project path="frameworks/opt/colorpicker" name="platform/frameworks/opt/colorpicker" />
@@ -274,6 +271,8 @@
   <project path="hardware/broadcom/libbt" name="platform/hardware/broadcom/libbt" groups="pdk" />
   <project path="hardware/broadcom/wlan" name="platform/hardware/broadcom/wlan" groups="broadcom_wlan" />
   <project path="hardware/invensense" name="platform/hardware/invensense" groups="invensense" />
+  <project path="hardware/libhardware" name="platform/hardware/libhardware" groups="pdk" />
+  <project path="hardware/libhardware_legacy" name="platform/hardware/libhardware_legacy" groups="pdk" />
   <project path="hardware/qcom/audio" name="platform/hardware/qcom/audio" groups="qcom" />
   <project path="hardware/qcom/bt" name="platform/hardware/qcom/bt" groups="qcom" />
   <project path="hardware/qcom/camera" name="platform/hardware/qcom/camera" groups="qcom" />
@@ -428,17 +427,5 @@
   <project path="tools/motodev" name="platform/tools/motodev" groups="notdefault,motodev" />
   <project path="tools/studio/cloud" name="platform/tools/studio/cloud" groups="notdefault,tools" />
   <project path="tools/swt" name="platform/tools/swt" groups="notdefault,tools" />
-  
-  <!--Xperia U-->
-  
-  <project path="kernel/sony/u8500" name="munjeni/android_kernel_xperiago" remote="github" revision="cm-11" />
-  <project path="device/sony/kumquat" name="Andrewas/android_device_sony_kumquat" remote="github" revision="cm-11.0" />
-  <project path="vendor/sony/kumquat" name="Andrewas/proprietary_vendor_sony" remote="github" revision="master" />
-  <project path="hardware/semc" name="Andrewas/android_hardware_semc" remote="github" revision="master" />
-  <project path="frameworks/native" name="CyanogenMod/android_frameworks_native" remote="github" revision="cm-11.0" />
-  <project path="frameworks/av" name="CyanogenMod/android_frameworks_av" remote="github" revision="cm-11.0" />
-  <project path="hardware/libhardware" name="CyanogenMod/android_hardware_libhardware" remote="github" revision="cm-11.0" />
-  <project path="hardware/libhardware_legacy" name="CyanogenMod/android_hardware_libhardware_legacy" remote="github" revision="cm-11.0" />
-  <project path="external/wpa_supplicant_8_ti" name="CyanogenMod/android_external_wpa_supplicant_8_ti" remote="github" revision="cm-11.0" />
 
 </manifest>
