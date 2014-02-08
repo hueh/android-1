@@ -12,7 +12,7 @@
            remote="aosp"
            sync-j="4" />
 
-  <project path="build" name="CyanogenMod/build" remote="github" revision="cm-11" />
+  <project path="build" name="CyanogenMod/build" remote="github" revision="cm-11" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
   <project path="abi/cpp" name="platform/abi/cpp" groups="pdk" />
